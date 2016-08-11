@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/triomics/as-studio/issues"
   },
-  "homepage": "https://github.com/triomics/as-studio#readme"
+  "homepage": "https://github.com/triomics/as-studio#readme",
+  "devDependencies": {
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.0"
+  }
 }

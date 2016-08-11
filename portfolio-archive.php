@@ -1,4 +1,11 @@
 <?php get_header (); ?>
 
+<?php get_sidebar(); ?> <!-- include sidebar -->
 
-<?php get_footer(); ?>
+<div class="col-md-9">
+
+<!-- all right(from .psd template) content here -->
+
+</div>
+
+<?php get_footer (); ?>
