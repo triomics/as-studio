@@ -6,22 +6,15 @@ var browserSync  = require('browser-sync').create();
 // var browserSync = require('browser-sync');
 
 gulp.task('sass', function() {
-    gulp.src('*.scss')
+    gulp.src('assets/scss/*.scss')
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(browserSync.stream())
-        .pipe(gulp.dest(function(f) {
-            return f.base;
-        }))
-        
-        browserSync.init({
-            proxy: "localhost/starter",
-            notify: false
-        });
+        .pipe(gulp.dest('assets/css'))    
 });
 
 gulp.task('default', ['sass'], function() {
-    gulp.watch('*.scss', ['sass']);
+    gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('*.php').on('change', browserSync.reload);
 })
 
