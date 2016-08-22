@@ -1,0 +1,115 @@
+.carousel-control.left,
+.carousel-control.right {
+	background: none;
+}
+
+$carousel-height: 480px;
+
+.carousel-control {
+	height: $carousel-height;
+
+	$arrow-size: 47px;
+	$arrow-circle-size: 71px;
+
+	& span {
+		display: inline-block;
+		@extend %center-v;
+		font-size: $arrow-size;
+		color: $reg-acc;
+		text-shadow: none;
+		line-height: $arrow-circle-size;
+		width: $arrow-circle-size;
+		height: $arrow-circle-size;
+		border-radius: 50%;
+		background-color: transparent;
+		text-align: center;
+		transition: color .2s ease, background-color .2s ease;
+	}
+
+	&.left {
+		span {
+			left: 0;
+		}
+	}
+
+	&.right {
+		
+		& span {
+			right: 0;
+		}
+	}
+
+	&:hover {
+		span {
+			background-color: $bg-2;
+		}
+	}
+}
+
+#frontpage-carousel {
+	height: $carousel-height;
+	margin-top: 50px;
+}
+
+.carousel-inner {
+
+	& .item {
+		height: $carousel-height;
+	}
+
+	& .parallax-item {
+		height: $carousel-height;
+		position: relative;
+	}
+
+	.cta-left {
+
+		& .layer {
+			height: $carousel-height;
+			
+			& img {
+				@extend %center-v;
+				right: 150px;
+				width: 306px;
+			}
+
+			& .cta-block {
+				@extend %center-v;
+				left: 150px;
+
+				& p {
+					font-size: 48px;
+					line-height: 1;
+					color: $reg-acc;
+					margin-bottom: 23px;
+				}
+			}
+		}
+	}
+
+	.cta-right {
+
+		& .layer {
+			width: 100%;
+			height: $carousel-height;
+			
+			& img {
+				@extend %center-v;
+				left: 100px;
+				width: 306px;
+			}
+
+			& .cta-block {
+				@extend %center-v;
+				right: 150px;
+
+				& p {
+					font-size: 48px;
+					line-height: 1;
+					color: $reg-acc;
+					margin-bottom: 23px;
+				}
+			}
+		}
+	}
+}

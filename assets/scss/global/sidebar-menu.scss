@@ -1,0 +1,96 @@
+.sidebar-heading {
+	margin-bottom: 35px;
+	margin-top: 100px;
+
+	& .heading {
+		font-size: $big;
+		color: $reg-head;
+		line-height: 1;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+$selected-btn-size: 30px;
+$btn-rotating-speed: 2s;
+
+@keyframes rotating-coin {
+	0% {
+		transform: translateY(-50%) rotateY(0deg);
+	}
+
+	25% {
+		transform: translateY(-50%) rotateY(90deg);
+	}
+
+	50% {
+		transform: translateY(-50%) rotateY(180deg);
+	}
+
+	75% {
+		transform: translateY(-50%) rotateY(270deg);
+	}
+
+	100% {
+		transform: translateY(-50%) rotateY(360deg);
+	}
+}
+
+%rotating-btn {
+	content: 'AS';
+	position: absolute;
+	display: block;
+	width: $selected-btn-size;
+	height: $selected-btn-size;
+	border-radius: 50%;
+	line-height: $selected-btn-size;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%) rotateY(0deg);
+	font-size:  $mid-2;
+	background-color: $bg-2;
+	text-align: center;
+	animation-name: rotating-coin;
+	animation-duration: $btn-rotating-speed;
+	animation-iteration-count: infinite;
+}
+
+.menu-sidebar-container {
+	
+	& .menu {
+		padding: 0;
+		list-style: none;
+
+		& .menu-item {
+			padding-left: 45px;
+			margin-bottom: 15px;
+			position: relative;
+
+			& a {
+				color: $reg;
+				font-size: $mid;
+				line-height: 1;
+				transition: color .2s ease;
+				text-decoration: none !important;
+
+				&:hover {
+					color: $reg-acc;
+					outline: none;
+				}
+			}
+
+			&.current-menu-item {
+				
+				& a {
+					color: $reg-acc;
+				}
+
+				&:before {
+					@extend %rotating-btn;
+				}
+			}
+		}
+	}	
+}

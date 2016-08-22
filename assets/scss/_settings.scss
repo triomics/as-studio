@@ -1,0 +1,47 @@
+/* Font */
+
+%font-thin {
+	font-family: 'SF UI Display', sans-serif;
+	font-weight: 100;
+}
+
+/* Color */
+
+$acc: #ff8b01; /* Accent color */
+$bg: #ecf0f1; /* body bg color */
+$bg-2: #fff; 
+$reg: #808080; /* regular text color */
+$reg-acc: #262626; /* regular text accent color */
+$reg-head: #333333; /* headings color */
+
+/* Font sizes */
+
+$big: 38px;
+$big-2: 30px;
+$mid: 24px;
+$mid-1: 18px;
+$mid-2: 16px;
+$small: 14px;
+
+
+%center-v {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+%center-h {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+%center-g {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+

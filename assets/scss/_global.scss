@@ -1,5 +1,14 @@
 @import './global/buttons.scss';
+@import './global/sidebar-menu.scss';
 @import './global/footer.scss';
 @import './global/g-classes.scss';
 @import './global/header.scss';
 @import './global/slider.scss';
+
+body {
+	@extend %font-thin;
+	color: $reg;
+	background-color: $bg;
+	min-height: 100vh;
+	overflow: hidden;
+}

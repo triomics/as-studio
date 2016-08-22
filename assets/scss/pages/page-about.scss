@@ -1,0 +1,29 @@
+.about-me-section {
+	margin-top: 100px;
+	text-align: center;
+
+	& .big-text {
+		font-size: $big; 
+		line-height: 1;
+		margin-bottom: 45px;
+	}
+
+	& p {
+		margin-bottom: 25px;
+		font-size: 18px;
+		line-height: 1.333;
+		color: $reg-head;
+	}
+}
+
+.img-background {
+	position: absolute;
+	right: -190px;
+	top: 30px;
+	opacity: .15;
+
+	& img {
+		width: 675px;
+		height: 675px;
+	}
+}

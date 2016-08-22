@@ -1,0 +1,74 @@
+@import "variables";
+
+@font-face {
+  font-family: 'AS';
+  src:  url('#{$icomoon-font-path}/AS.eot?985t3c');
+  src:  url('#{$icomoon-font-path}/AS.eot?985t3c#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/AS.ttf?985t3c') format('truetype'),
+    url('#{$icomoon-font-path}/AS.woff?985t3c') format('woff'),
+    url('#{$icomoon-font-path}/AS.svg?985t3c#AS') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="as-"], [class*=" as-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'AS' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.as-instagram2 {
+  &:before {
+    content: $as-instagram2;
+  }
+}
+.as-linkedin {
+  &:before {
+    content: $as-linkedin;
+  }
+}
+.as-instagram1 {
+  &:before {
+    content: $as-instagram1;
+  }
+}
+.as-youtube {
+  &:before {
+    content: $as-youtube;
+  }
+}
+.as-facebook {
+  &:before {
+    content: $as-facebook;
+  }
+}
+.as-twitter {
+  &:before {
+    content: $as-twitter;
+  }
+}
+.as-arow-left {
+  &:before {
+    content: $as-arow-left;
+  }
+}
+.as-arow-right {
+  &:before {
+    content: $as-arow-right;
+  }
+}
+.as-burger {
+  &:before {
+    content: $as-burger;
+  }
+}
+
