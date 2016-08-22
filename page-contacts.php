@@ -9,6 +9,54 @@ get_header (); ?>
 
 <!-- all right(from .psd template) content here -->
 
+	<div class="row">
+		<div class="col-md-offset-2 col-md-10">
+			<section class="contact-section">
+				<h2 class="heading">Готова Вас выслушать</h2>
+				<p class="sub-head">Давайте создадим вместе что-то стоящее и красивое</p>
+				<div class="form-wrapper">
+					<form id="contact-form" class="form" action="contact.php" method="POST" novalidate>
+						<div id="form-el-1" class="form-el active">
+							<label for="name" class="el-title">Как к Вам обращаться?</label>
+							<div class="el-input">
+								<input id="name" name="name" type="text" required autocomplete="off" class="text-input">
+							</div>
+							<button class="btn next-btn" data-formstep="2">Далее</button>
+						</div>
+						<div id="form-el-2" class="form-el">
+							<label for="email" class="el-title">Ваш email</label>
+							<div class="el-input">
+								<input id="email" name="email" autocomplete="off" type="email" required class="text-input">
+							</div>
+							<button class="btn next-btn" data-formstep="3">Далее</button>
+						</div>
+						<div id="form-el-3" class="form-el">
+							<label for="message" class="el-title">Сообщение</label>
+							<div class="el-input">
+								<textarea name="message" id="message" class="text-textarea" rows="5" form="contact-form" ></textarea>
+							</div>
+							<button class="btn next-btn" data-formstep="send">Отправить</button>
+						</div>
+					</form>
+				</div>
+
+				<div id="contact-success" class="contact-success">
+					<div class="popup-window">
+						<div class="popup-content">
+							<button class="btn close-btn" data-formstep="1">
+								<div class="line-wrapper">
+									<span class="line-1"></span>
+									<span class="line-2"></span>
+								</div>
+							</button>
+							<h2 class="heading">Благодарю!</h2>
+							<p class="sub-head">Ваше сообщение успешно отправлено.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
 </div>
 
 <?php get_footer (); ?>
