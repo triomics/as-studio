@@ -6,16 +6,23 @@ var browserSync  = require('browser-sync').create();
 
 // var browserSync = require('browser-sync');
 
-gulp.task('sass', function() {
-    gulp.src('assets/scss/*.scss')
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(browserSync.stream())
-        .pipe(gulp.dest('assets/css'))    
+gulp.task('sass', function() { 
+gulp.src('*.scss') 
+.pipe(sass()) 
+.pipe(autoprefixer()) 
+.pipe(browserSync.stream()) 
+.pipe(gulp.dest(function(f) { 
+return f.base; 
+})) 
+
+browserSync.init({ 
+proxy: "localhost/as-studio", 
+notify: false 
+}); 
 });
 
 gulp.task('default', ['sass'], function() {
-    gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/scss/**/*.scss', ['sass']).on('change', browserSync.reload);
     gulp.watch('*.php').on('change', browserSync.reload);
 })
 
