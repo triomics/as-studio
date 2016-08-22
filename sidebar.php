@@ -4,6 +4,10 @@
 
 <aside class="sidebar col-sm-3 col-md-3" role="complementary">
 
+	<div class="sidebar-heading">
+		<a href="##" class="heading">Алена Спивак</a>
+	</div>
+	
 	<div class="sidebar-widget side-content">
 		<?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-1')) ?>
 	</div>
