@@ -3,6 +3,21 @@
 	margin-top: 70px;
 	height: 450px;
 
+	& .form-vacancy {
+
+		& .contact-section {
+			padding-top: 0;
+		}
+
+		& .contact-success {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+
 	& .screen-step {
 		color: $reg-acc;
 		position: absolute;
@@ -122,17 +137,17 @@
 		}
 
 		&.screen-1 {
-			z-index: 100;
+			z-index: 110;
 			background-color: $bg;
 		}
 
 		&.screen-2 {
-			z-index: 101;
+			z-index: 111;
 			background-color: $bg;
 		}
 
 		&.screen-3 {
-			z-index: 102;
+			z-index: 112;
 			background-color: $bg;
 		}
 

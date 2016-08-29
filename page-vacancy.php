@@ -3,6 +3,33 @@
 ?>
 
 <?php get_header (); ?>
+<script src="<?php echo get_template_directory_uri()?>/assets/js/animsition.min.js"></script>
+<script>
+	jQuery(document).ready(function($) {
+	  $("body").animsition({
+	    inClass: 'fade-in-up-sm',
+	    outClass: 'fade-out-up-sm',
+	    inDuration: 1500,
+	    outDuration: 800,
+	    linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+	    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+	    loading: true,
+	    loadingParentElement: 'body', //animsition wrapper element
+	    loadingClass: 'animsition-loading',
+	    loadingInner: '<div class="some">some</div>', // e.g '<img src="loading.svg" />'
+	    timeout: false,
+	    timeoutCountdown: 5000,
+	    onLoadEvent: true,
+	    browser: [ 'animation-duration', '-webkit-animation-duration'],
+	    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+	    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+	    overlay : false,
+	    overlayClass : 'animsition-overlay-slide',
+	    overlayParentElement : 'body',
+	    transition: function(url){ window.location.href = url; }
+	  });
+	});
+</script>
 
 <?php get_sidebar(); ?> <!-- include sidebar -->
 
@@ -17,7 +44,7 @@
 					<div class="regular-job">
 						<h2 class="heading">Обычная работа</h2>
 						<p class="sub-head">Для того, кто хочет поработать...</p>
-						<button class="btn next-btn">Далее</button>
+						<button class="btn next-btn" data-goto="5">Далее</button>
 					</div>
 					<div class="dream">
 						<h2 class="heading">Осуществление мечты</h2>
@@ -29,6 +56,66 @@
 							<div class="col-md-6">
 							<button class="btn secondary-btn" data-goto="2">Что значит носить ведра?</button>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div id="screen-5" class="screen-step">
+				<div class="form-vacancy">
+					<div class="nav-sub">
+						<button class="btn back-btn" data-goto="1">Назад</button>
+					</div>
+						<section class="contact-section">
+							<h2 class="heading">Готова Вас выслушать</h2>
+							<p class="sub-head">Давайте создадим вместе что-то стоящее и красивое</p>
+							<div class="form-wrapper">
+								<form id="contact-form" class="form" action="contact.php" method="POST" novalidate>
+									<div id="form-el-1" class="form-el active">
+										<label for="name" class="el-title">Как к Вам обращаться?</label>
+										<div class="el-input">
+											<input id="name" name="name" type="text" required autocomplete="off" class="text-input">
+										</div>
+										<button class="btn next-btn" data-formstep="2">Далее</button>
+									</div>
+									<div id="form-el-2" class="form-el">
+										<label for="sources" class="el-title">Вакансии</label>
+										<div class="el-input">
+											<select name="selectProp" id="sources" form="contact-form" class="custom-select sources" placeholder="Работа с векторной графикой">
+												<option value="site">Работа с векторной графикой</option>
+												<option value="design">Дизайн</option>
+											</select>
+										</div>
+										<button class="btn next-btn" data-formstep="3">Далее</button>
+									</div>
+									<div id="form-el-3" class="form-el">
+										<label for="email" class="el-title">Ваш email</label>
+										<div class="el-input">
+											<input id="email" name="email" autocomplete="off" type="email" required class="text-input">
+										</div>
+										<button class="btn next-btn" data-formstep="4">Далее</button>
+									</div>
+									<div id="form-el-4" class="form-el">
+										<label for="message" class="el-title">Ваши навыки и пожелания</label>
+										<div class="el-input">
+											<textarea name="message" id="message" class="text-textarea" rows="5" form="contact-form" ></textarea>
+										</div>
+										<button class="btn next-btn" data-formstep="send">Отправить</button>
+									</div>
+								</form>
+							</div>
+						</section>
+				</div>
+				</div>
+				<div id="contact-success" class="contact-success">
+					<div class="popup-window">
+						<div class="popup-content">
+							<button class="btn close-btn" data-formstep="1" data-goto="1">
+								<div class="line-wrapper">
+									<span class="line-1"></span>
+									<span class="line-2"></span>
+								</div>
+							</button>
+							<h2 class="heading">Благодарю!</h2>
+							<p class="sub-head">Ваше сообщение успешно отправлено.</p>
 						</div>
 					</div>
 				</div>

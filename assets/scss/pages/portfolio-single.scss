@@ -1,0 +1,138 @@
+.portfolio-single {
+	& .vacancy-section .screen-step .info-text .text-content {
+		padding-right: 0;
+
+		& .heading {
+			padding-top: 30px;
+		}
+
+		& img {
+			width: 100%;
+			height: auto;
+		}
+
+		& ul {
+			margin-bottom: 25px;
+
+			& li {
+				font-size: $mid-1;
+				line-height: 1.3;
+			}
+		}
+
+		& *:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	& .buy {
+
+		& .contact-section {
+			padding-top: 0;
+
+			& .form-wrapper {
+				overflow: visible;
+			}
+
+			& .input-caption {
+				font-size: $mid-1;
+				padding-left: 20px;
+				margin-bottom: 45px;
+				margin-top: 15px;
+				max-width: 350px;
+			}
+
+			& .el-input {
+				margin-bottom: 0;
+
+				&+.btn {
+					margin-top: 45px;
+				}
+			}
+		}
+
+		& .btn.cta {
+			display: block;
+			width: 370px;
+			margin-bottom: 45px;
+		}
+
+		& .contact-success {
+			background-color: rgba(236,240,241,1);
+		}
+	}
+
+	& #contact-success {
+
+		&.contact-success {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			width: 370px;
+		}
+	}
+
+	& .mailto {
+		position: relative;
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $reg-acc;
+		}
+	}
+
+	& .rnd-block {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background-color: #004c6a;
+			overflow: hidden;
+			margin-bottom: 25px;
+
+			& img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	
+	& .testimonial {
+		color: $reg-head;
+		
+		& .rnd-block {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			background-color: #004c6a;
+			overflow: hidden;
+			margin-bottom: 25px;
+
+			& img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		& .job {
+			font-size: $mid-1;
+			margin-bottom: 0;
+		}
+
+		& .name {
+			font-size: $big-2;
+		}
+
+		& .heading {
+			margin-bottom: 35px;
+		}
+	}
+}
+

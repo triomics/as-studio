@@ -1,10 +1,14 @@
 /*
-
+#0. Preloader Logic
 #1. Parallax effect for frontpage
 #2. Copyrights and language
 #3. Scrollbar init
 #4. Vacancy page logic
 #5. Contact page logic
+#6. Magic for archive-portfolio page
+#7.	Custom selectbox
+#8. Animation for buttons
+#9. soc
 */
 
 jQuery(document).ready(function($) {
@@ -23,22 +27,26 @@ jQuery(document).ready(function($) {
 
 	languageEl.on('click', function() {
 		copyrightEl.removeClass('active');
+		$('.arow-container').removeClass('active');
 		closeOpen(this);
 	})
 
 	copyrightEl.on('click', function() {
 		languageEl.removeClass('active');
+		$('.arow-container').removeClass('active');
 		closeOpen(this);
 	})
 
 	function closeOpen(elem) {
 		if ( $(elem).hasClass('active') ) {
 			$(elem).removeClass('active');
+			$(elem).find('.arow-container').removeClass('active');
 			setTimeout( function() {
 				$(elem).parents('.footer').css('z-index', "99");
 			}, 500);
 		} else {
 			$(elem).addClass('active');
+			$(elem).find('.arow-container').addClass('active');
 			$(elem).parents('.footer').css('z-index', "500");
 		}
 	}
@@ -69,7 +77,7 @@ jQuery(document).ready(function($) {
 #5. Contact page logic
 */
 
-	var btnContact = $('.contact-section .btn'),
+	var btnContact = $('.btn'),
 		formElStep = $('.contact-section .form-el');
 
 	btnContact.each(function(index, el) {
@@ -77,19 +85,88 @@ jQuery(document).ready(function($) {
 			var numData = $(this).data('formstep'),
 				selectorData = "#form-el-" + numData;
 			if ( numData != "send" ) {
-				e.preventDefault();
 				if ( numData != undefined ) {
+					e.preventDefault();
 					formElStep.removeClass('active');
 					$(selectorData).addClass('active');
 				}
 				if ( numData == "1" ){
+					e.preventDefault();
 					$('#contact-success').removeClass('active');
 				}
-			}	else {
+				if ( numData == "sendit" ){
+					e.preventDefault();
+					formElStep.removeClass('active');
+					$('#contact-success').addClass('active');
+					$('input, textfield').val('');
+				}
+			}	if ( numData == 'send' ) {
 				e.preventDefault();
 				$('#contact-success').addClass('active');
 				$('input, textfield').val('');
 			}
 		})
 	});
+/*
+#6. Magic for archive-portfolio page
+*/
+	$(".portfolio-archive .carousel-inner .item:first").addClass("active");
+
+/*
+#7	Custom selectbox
+*/
+	$(".custom-select").each(function() {
+	  var classes = $(this).attr("class"),
+	      id      = $(this).attr("id"),
+	      name    = $(this).attr("name");
+	  var template =  '<div class="' + classes + '">';
+	      template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+	      template += '<div class="custom-options">';
+	      $(this).find("option").each(function() {
+	        template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+	      });
+	  template += '</div></div>';
+	  
+	  $(this).wrap('<div class="custom-select-wrapper"></div>');
+	  $(this).hide();
+	  $(this).after(template);
+	});
+	$(".custom-option:first-of-type").hover(function() {
+	  $(this).parents(".custom-options").addClass("option-hover");
+	}, function() {
+	  $(this).parents(".custom-options").removeClass("option-hover");
+	});
+	$(".custom-select-trigger").on("click", function() {
+	  $('html').one('click',function() {
+	    $(".custom-select").removeClass("opened");
+	  });
+	  $(this).parents(".custom-select").toggleClass("opened");
+	  event.stopPropagation();
+	});
+	$(".custom-option").on("click", function() {
+	  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+	  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+	  $(this).addClass("selection");
+	  $(this).parents(".custom-select").removeClass("opened");
+	  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+	});
+
+/*
+#8 Animation for buttons
+*/
+	$('.rnd-container').each( function() {
+	    $(this).on('click', function() {
+	      $(this).toggleClass('active');
+	    })
+	  })
+
+/*
+#9 soc
+*/
+
+	var socBlock = $('#soc-block');
+
+	socBlock.on('hover', function() {
+		$('body').toggleClass('darker');
+	})
 });

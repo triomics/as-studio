@@ -24,13 +24,23 @@ get_header (); ?>
 							<button class="btn next-btn" data-formstep="2">Далее</button>
 						</div>
 						<div id="form-el-2" class="form-el">
-							<label for="email" class="el-title">Ваш email</label>
+							<label for="sources" class="el-title">Что бы Вы хотели?</label>
 							<div class="el-input">
-								<input id="email" name="email" autocomplete="off" type="email" required class="text-input">
+								<select name="selectProp" id="sources" form="contact-form" class="custom-select sources" placeholder="Сайт">
+									<option value="site">Сайт</option>
+									<option value="design">Дизайн</option>
+								</select>
 							</div>
 							<button class="btn next-btn" data-formstep="3">Далее</button>
 						</div>
 						<div id="form-el-3" class="form-el">
+							<label for="email" class="el-title">Ваш email</label>
+							<div class="el-input">
+								<input id="email" name="email" autocomplete="off" type="email" required class="text-input">
+							</div>
+							<button class="btn next-btn" data-formstep="4">Далее</button>
+						</div>
+						<div id="form-el-4" class="form-el">
 							<label for="message" class="el-title">Сообщение</label>
 							<div class="el-input">
 								<textarea name="message" id="message" class="text-textarea" rows="5" form="contact-form" ></textarea>

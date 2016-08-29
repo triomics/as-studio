@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-md-10">
-		<div class="social-icon-btn">
+		<div id="soc-block" class="social-icon-btn">
 			<button class="btn soc-btn">Я в соц. сетях
 				<ul class="soc-icons">
 					<li><a href="#" class="as-twitter"></a></li>
@@ -18,9 +18,11 @@
 	<div class="row">
 		<div class="col-md-offset-4 col-md-6">
 			<div id="copyright" class="block copyright">
-				<span class="indicator">
-					^
-				</span>
+				<div class="indicator">
+					<div class="arow-container">
+					  <div class="arow-horizontal"></div>
+					</div>
+				</div>
 				<p class="text">Copyright &#169; 2016. Все права защищены</p>
 				<a href="#"><span>Политика конфиденциальности</span></a>
 				<a href="#"><span>Согласие с рассылкой</span></a>
@@ -30,9 +32,11 @@
 		</div>
 		<div class="col-md-offset-1 col-md-1">
 			<div id="language" class="block language">
-				<span class="indicator">
-					^
-				</span>
+				<div class="indicator">
+					<div class="arow-container">
+					  <div class="arow-horizontal"></div>
+					</div>
+				</div>
 				<a href="#" class="lang-link active"><span>RU</span></a>
 				<a href="#" class="lang-link"><span>UA</span></a>
 				<a href="#" class="lang-link"><span>EN</span></a>
@@ -46,5 +50,6 @@
 
             </div> <!-- close row -->
         </div> <!-- close container -->
+        </div> <!-- animsition -->
     </body>
 </html>

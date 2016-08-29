@@ -116,3 +116,36 @@ function as_widgets_init() {
 
 }
 add_action( 'widgets_init', 'as_widgets_init' );
+
+
+// Add custom post type
+
+// Create post type Project
+function create_project_type() {
+
+  $args = array(
+    'labels' => array(
+      'name' => __('Portfolio'),
+      'singular_name' => __('Portfolio'),
+      'all_items' => __('All Portfolies'),
+	  	'add_new' => 'Add New Portfolio',
+      'add_new_item' => __('Add New Portfolio'),
+      'edit_item' => __('Edit Portfolio'),
+    ),
+		'public' => true,
+		'hierarchical' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'portfolio'),
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => true,
+		'capability_type' => 'post',
+		'supports' => array('title', 'editor'),
+		'exclude_from_search' => true,
+		'menu_position' => 16,
+		'menu_icon' => 'dashicons-images-alt'
+    );
+
+  register_post_type('portfolio', $args);
+}
+add_action( 'init', 'create_project_type');

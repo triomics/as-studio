@@ -35,10 +35,14 @@
 
   <!-- Controls -->
   <a class="left carousel-control" href="#frontpage-carousel" role="button" data-slide="prev">
-    <span class="as-arow-left" aria-hidden="true"></span>
+    <div class="rnd-container left" aria-hidden="true">
+        <div class="rnd-arrow"></div>
+      </div>
   </a>
   <a class="right carousel-control" href="#frontpage-carousel" role="button" data-slide="next">
-    <span class="as-arow-right" aria-hidden="true"></span>
+    <div class="rnd-container right" aria-hidden="true">
+        <div class="rnd-arrow"></div>
+      </div>
   </a>
 </div>
 </div>
