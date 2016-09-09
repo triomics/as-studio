@@ -96,6 +96,19 @@ jQuery(document).ready(function($) {
 					formElStep.removeClass('active');
 					$(selectorData).addClass('active');
 				}
+				if ( numData == "back" ){
+					e.preventDefault();
+					var numDataBack = $(this).next().data('formstep');
+						var selectorDataBack;
+						if (numDataBack != 'send') {
+							selectorDataBack = "#form-el-" + (numDataBack - 2);
+						} else {
+							selectorDataBack = "#form-el-" + (3);
+						}
+						
+						formElStep.removeClass('active');
+						$(selectorDataBack).addClass('active');
+				}
 				if ( numData == "1" ){
 					e.preventDefault();
 					$('#contact-success').removeClass('active');
