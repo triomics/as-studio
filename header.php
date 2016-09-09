@@ -16,6 +16,8 @@
 <!-- preloader-regular -->
 
 <script src="<?php echo get_template_directory_uri()?>/assets/js/animsition.js"></script>
+
+<?php if(!is_front_page()) : ?>
 <script>
 	jQuery(document).ready(function($) {
 	  $(".animsition").animsition({
@@ -43,9 +45,38 @@
 	});
 </script>
 
+<?php endif; ?>
+
 </head>
 <body>
+<?php if(is_front_page()) : ?>
 <!-- preloader-homepage -->
+<script>
+	jQuery(document).ready(function($) {
+	  $(".animsition").animsition({
+	    inClass: 'fade-in-up-sm',
+	    outClass: 'fade-out-up-sm',
+	    inDuration: 500,
+	    outDuration: 500,
+	    linkElement: 'a:not([target="_blank"]):not([href^="#"])',
+	    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+	    loading: true,
+	    loadingParentElement: 'body', //animsition wrapper element
+	    loadingClass: 'animsition-loading',
+	    loadingInner: '<div class="preloader-as">AS</div>', // e.g '<img src="loading.svg" />'
+	    timeout: false,
+	    timeoutCountdown: 5000,
+	    onLoadEvent: true,
+	    browser: [ 'animation-duration', '-webkit-animation-duration'],
+	    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+	    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+	    overlay : false,
+	    overlayClass : 'animsition-overlay-slide',
+	    overlayParentElement : 'body',
+	    transition: function(url){ window.location.href = url; }
+	  });
+	});
+</script>
 
 <div class="preloader-frontpage">
 	<div class="preloader-bg"></div>
@@ -103,6 +134,7 @@
 			animate(); 	
 		 }, 4300);
 </script>
+<?php endif; ?>
 <div class="animsition">
 <div class="line-through"></div>
 <div class="container"> <!-- open container -->
