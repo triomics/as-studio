@@ -99,17 +99,20 @@ jQuery(document).ready(function($) {
 				if ( numData == "1" ){
 					e.preventDefault();
 					$('#contact-success').removeClass('active');
+					$('#soc-block').css('z-index', '');
 				}
 				if ( numData == "sendit" ){
 					e.preventDefault();
 					formElStep.removeClass('active');
 					$('#contact-success').addClass('active');
 					$('input, textfield').val('');
+					$('#soc-block').css('z-index', '-1');
 				}
 			}	if ( numData == 'send' ) {
 				e.preventDefault();
 				$('#contact-success').addClass('active');
 				$('input, textfield').val('');
+				$('#soc-block').css('z-index', '-1');
 			}
 		})
 	});
