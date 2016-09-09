@@ -11629,6 +11629,10 @@ body {
   color: #3d7398;
 }
 
+.next-btn + .next-btn {
+  margin-left: 5px;
+}
+
 .sidebar {
   position: relative;
   z-index: 102;
