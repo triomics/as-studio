@@ -40,8 +40,8 @@
 			color: $acc;
 
 			&:before {
-				width: 120%;
-				height: 170%;
+				width: 110%;
+				height: 135%;
 				border-radius: 40px;
 			}
 		}
@@ -53,13 +53,18 @@
 		padding: 5px 40px;
 		border-radius: 20px;
 		color: $acc;
-		transition: color .2s ease, background-color .2s ease;
+		box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0);
+		transition: color .2s ease, background-color .2s ease, box-shadow .4s ease;
 
-		&:hover,
 		&.active {
 			background-color: $acc;
 			color: $bg-2;
 			box-shadow: none;
+		}
+		&:hover {
+			background-color: $acc;
+			color: $bg-2;
+			box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, .3);
 		}
 	}
 
@@ -69,13 +74,14 @@
 		line-height: 42px;
 		height: 42px;
 		border-radius: 20px;
-		background-color: $bg-2;
-		border: 1px solid $bg-2;
-		color: $reg-acc;
-		transition: border .2s ease;
+		background-color: rgba(255,255,255,.5);
+		border: 1px solid transparent;
+		color: $reg;
+		transition: background-color .2s ease, color .2s ease;
 
 		&:hover {
-			border: 1px solid $acc;
+			background-color: rgba(255,255,255, 1);
+			color: $reg-head;
 		}
 	}
 
@@ -103,6 +109,7 @@
 .social-icon-btn {
 
 	& .soc-btn {
+		text-align: left;
 		position: relative;
 		z-index: 999;
 		width: 230px;
@@ -133,23 +140,33 @@
 		margin: 0;
 		padding: 0;
 		display: inline-block;
-		margin-left: 220px;
+		margin-left: 150px;
+		height: 100%;
 		opacity: 0;
 		transition: opacity .2s ease;
 
 		& li {
 			display: inline-block;
-			margin-left: 70px;
+			margin-left: 55px;
 
 			&:first-child {
 				margin-left: 0;
 			}
 			
 			& a {
+				display: inline-block;
+				position: relative;
 				font-size: 24px;
 				text-decoration: none;
 				color: $bg-2;
 				transition: color .2s ease;
+
+				&:after {
+					content: '';
+					@extend %center-g;
+					width: 400%;
+					height: 400%;
+				}
 
 				&.as-twitter:hover {
 					color: #63cdf1;
@@ -165,6 +182,10 @@
 				}
 				&.as-instagram1:hover {
 					color: #c7c5b3;
+				}
+
+				&.as-vk:hover {
+					color: #3d7398;
 				}
 			}
 		}

@@ -51,7 +51,7 @@ $btn-rotating-speed: 4s;
 	height: $selected-btn-size;
 	border-radius: 50%;
 	line-height: $selected-btn-size;
-	left: 0;
+	right: -30px;
 	top: 50%;
 	transform: translateY(-50%) rotateY(0deg);
 	font-size:  $mid-2;
@@ -67,10 +67,11 @@ $btn-rotating-speed: 4s;
 	& .menu {
 		padding: 0;
 		list-style: none;
+		text-align: right;
 
 		& .menu-item {
-			padding-left: 45px;
-			margin-bottom: 15px;
+			padding-right: 37px;
+			margin-bottom: 23px;
 			position: relative;
 
 			& a {
@@ -98,4 +99,68 @@ $btn-rotating-speed: 4s;
 			}
 		}
 	}	
+}
+
+.page-about+.col-md-12 #soc-block {
+	margin-top: 120px;
+}
+
+.vacancy-page+.col-md-12 #soc-block {
+	margin-top: 45px;
+}
+
+#soc-block {
+	position: relative;
+
+	& .img-soc {
+		position: absolute;
+		bottom: 100%;
+		z-index: -1;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity .3s ease, visibility .3s .3s ease, z-index .3s .3s;
+
+		&.active {
+			z-index: 999;
+			visibility: visible;
+			opacity: 1;
+			transition: opacity .3s .3s ease, visibility .3s ease, z-index .3s;
+		}
+
+		&.youtube {
+			left: 435px;
+
+			& img {
+				width: 320px;
+			}
+		}
+		&.facebook {
+			left: 445px;
+
+			& img {
+				width: 265px;
+			}
+		}
+		&.vk {
+			left: 385px;
+
+			& img {
+				width: 500px;
+			}
+		}
+		&.twitter {
+			left: 400px;
+
+			& img {
+				width: 410px;
+			}
+		}
+		&.linked-in {
+			left: 405px;
+
+			& img {
+				width: 405px;
+			}
+		}
+	}
 }

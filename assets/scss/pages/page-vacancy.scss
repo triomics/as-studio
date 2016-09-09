@@ -34,6 +34,10 @@
 		transition: opacity .2s ease, transform .2s ease, visibility .2s .2s ease;
 		transition: opacity .2s ease, transform .2s ease, visibility .2s .2s ease, -webkit-transform .2s ease;
 
+		& .form-el.active {
+			visibility: hidden;
+		}
+
 		&.active {
 			-webkit-transform: translateY(0);
 			    -ms-transform: translateY(0);
@@ -43,6 +47,9 @@
 			transition: opacity .2s .2s ease, visibility .1s ease, -webkit-transform .2s .2s ease;
 			transition: opacity .2s .2s ease, transform .2s .2s ease, visibility .1s ease;
 			transition: opacity .2s .2s ease, transform .2s .2s ease, visibility .1s ease, -webkit-transform .2s .2s ease;
+			& .form-el.active {
+				visibility: visible;
+			}
 		}
 
 		& .heading {
@@ -58,7 +65,7 @@
 		}
 
 		& .simple-text {
-			font-size: $mid;
+			font-size: $mid-1;
 			margin-bottom: 0;
 		}
 
@@ -71,7 +78,7 @@
 			margin-top: 35px;
 
 			& .linkto {
-				font-size: $big-2;
+				font-size: $mid-1;
 				color: $acc;
 				display: block;
 				transition: color .2s ease;
@@ -153,7 +160,7 @@
 
 		&.screen-4 {
 			z-index: 9999;
-			background-color: rgba(0,0,0, .5);
+			background-color: $bg;
 			position: fixed;
 			width: 100%;
 			height: 100%;
@@ -162,15 +169,50 @@
 		}
 	}
 
+	& .popup-image {
+		position: absolute;
+
+		&.one {
+			top: 140px;
+			left: 50%;
+			transform: translateX(-123%);
+			& img {
+				width: 430px;
+			}
+		}
+
+		&.two {
+			top: 205px;
+			left: 50%;
+			transform: translateX(27%);
+			& img {
+				width: 340px;
+			}
+		}
+	}
+
 	& .popup-window {
-		@extend %center-g;
+		position: absolute;
+		top: 190px;
+		left: 50%;
+		transform: translateX(-30%);
 		display: inline-block;
-		background: $bg-2;
+		background: transparent;
 		border-radius: 20px;
+
+		&.two {
+			transform: translateX(-60%);
+		}
 
 		& .popup-content {
 			position: relative;
-			padding: 55px 50px;
+			padding: 0;
+
+			& .back-btn {
+				position: absolute;
+				bottom: 200%;
+				left: 130%;
+			}
 
 			& .close-btn {
 				position: absolute;
@@ -180,7 +222,7 @@
 				height: 40px;
 				border-radius: 50%;
 				background-color: $bg;
-				opacity: 0.5;
+				opacity: 1;
 				transition: opacity .2s ease;
 
 				& .line-wrapper {
@@ -194,8 +236,8 @@
 					top: 50%;
 					left: 50%;
 					width: 1px;
-					height: 95%;
-					background-color: $reg-acc;
+					height: 27px;
+					background-color: #262626;
 				}
 
 				&:hover {

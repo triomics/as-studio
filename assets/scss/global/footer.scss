@@ -2,13 +2,14 @@
 	position: fixed;
 	bottom: 0;
 	z-index: 99;
+	transition: all .2s;
 }
 
 .block {
 
 	& {
 		text-align: center;
-		color: $reg-acc;
+		color: $reg;
 		background-color: transparent;
 		padding-top: 30px;
 		padding-bottom: 10px;
@@ -16,19 +17,27 @@
 		border-top-right-radius: 20px;
 		position: relative;
 		cursor: pointer;
-		transform: translateY(190px);
+		transform: translateY(165px);
 		transition: all .5s cubic-bezier(0.770, 0.000, 0.175, 1.000);
 	
 		&.active,
 		&:hover {
-			background-color: $bg-2;
+			background-color: rgba(255,255,255,.9);
+			color: $reg-head;
 	
 			& .indicator {
 				opacity: 1;
 			}
+
+			& a {
+				&:hover {
+					color: $reg-head;
+				}
+			}
 		}
 	
 		&.active {
+			font-weight: 100;
 			padding-top: 30px;
 			transform: translateY(0);
 	
@@ -46,16 +55,21 @@
 		}
 		
 		& .text {
-			font-size: $mid;
+			font-size: $mid-1;
 			margin-bottom: 25px;
 		}
 	
 		& a {
 			display: block;
 			text-decoration: none;
-			font-size: $mid-1;
-			color: $reg-acc;
-			margin-bottom: 20px;
+			font-size: $mid-3;
+			color: $reg;
+			margin-bottom: 10px;
+			transition: color .2s ease;
+
+			&:last-of-type {
+				margin-bottom: 25px;
+			}
 	
 			& span {
 				position: relative;
@@ -67,13 +81,14 @@
 					height: 1px;
 					background: $reg;
 					bottom: 0;
-					transition: width .2s ease;
+					transition: width .2s ease, background-color .2s ease;
 				}
 	
 				&:hover {
 					
 					&:before {
 						width: 90%;
+						background: $reg-head;
 					}
 				}
 			}
@@ -81,11 +96,15 @@
 	
 		& p {
 			font-size: $mid-1;
+
+			&:last-of-type {
+				color: $acc;
+			}
 		}
 	}
 
 	&.language {
-		transform: translateY(195px);
+		transform: translateY(165px);
 
 		&:before {
 			content: '';
@@ -104,6 +123,7 @@
 		& a {
 			margin-bottom: 14px;
 			color: $reg;
+			font-size: $mid-1;
 			transition: color .2s ease;
 			
 			& span {
@@ -123,7 +143,7 @@
 
 			&:hover,
 			&.active {
-				color: $reg-acc;
+				color: $reg-head;
 
 				& span {
 

@@ -3,7 +3,7 @@
 	background: none;
 }
 
-$carousel-height: 480px;
+$carousel-height: 500px;
 
 .carousel-control {
 	height: $carousel-height;
@@ -60,6 +60,7 @@ $carousel-height: 480px;
 	& .parallax-item {
 		height: $carousel-height;
 		position: relative;
+		padding-left: 0;
 	}
 
 	.cta-left {
@@ -69,7 +70,7 @@ $carousel-height: 480px;
 			
 			& img {
 				@extend %center-v;
-				right: 150px;
+				right: 110px;
 				width: 306px;
 			}
 
@@ -95,13 +96,14 @@ $carousel-height: 480px;
 			
 			& img {
 				@extend %center-v;
-				left: 100px;
+				left: 90px;
 				width: 306px;
 			}
 
 			& .cta-block {
 				@extend %center-v;
 				right: 150px;
+				text-align: right;
 
 				& p {
 					font-size: 48px;
