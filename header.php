@@ -132,7 +132,7 @@
 
 		 setTimeout( function() {
 			animate(); 	
-		 }, 4300);
+		 }, 4500);
 </script>
 <?php endif; ?>
 <div class="animsition">
