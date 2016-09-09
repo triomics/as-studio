@@ -9,15 +9,21 @@
 #7.	Custom selectbox
 #8. Animation for buttons
 #9. soc
+#10 form validation init
 */
 
 jQuery(document).ready(function($) {
+/*
+#0. Preloader logic 
+*/
+
 /*
 #1. Parallax effect for frontpage
 */
 
 	$('#front-1').parallax();
 	$('#front-2').parallax();
+	$('#front-3').parallax();
 
 /*
 #2. Copyrights and language
@@ -164,9 +170,29 @@ jQuery(document).ready(function($) {
 #9 soc
 */
 
-	var socBlock = $('#soc-block');
+	var socBlock = $('#soc-block'),
+		socItem = $('.soc-icons .links-hover');
 
 	socBlock.on('hover', function() {
-		$('body').toggleClass('darker');
+		
 	})
+
+	socItem.each(function() {
+		$(this).hover( function() {
+			$('body').addClass('darker');
+			$('.img-soc.'+ $(this).data('hovershow')).addClass('active');
+		}, function() {
+			$('.img-soc').removeClass('active');
+			$('body').removeClass('darker');
+		})
+	})
+
+/*
+#10 form validation init
+*/
+	$.validate({
+		lang : 'ru'
+	});
+
+
 });
