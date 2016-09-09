@@ -42,11 +42,11 @@
 								<button class="btn back-btn" data-goto="1"><?php _e('Назад', 'as-studio'); ?></button>
 							</div>
 							<div class="row">
-								<div class="col-md-4">
+								<div class="col-md-offset-1 col-md-4">
 									<div class="rnd-block">
 									</div>
 								</div>
-								<div class="col-md-8">
+								<div class="col-md-7">
 									<section class="contact-section">
 										<h2 class="heading"><?php _e('Безопасная покупка', 'as-studio'); ?></h2>
 										<div class="form-wrapper">
@@ -84,7 +84,7 @@
 							</div>
 							<div class="testimonial">
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-offset-1 col-md-4">
 										<div class="rnd-block">
 											<img src="<?php echo get_template_directory_uri()?>/assets/img/photo.jpg" alt="">
 										</div>
