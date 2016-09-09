@@ -2,7 +2,7 @@
 
 <?php get_sidebar(); ?> <!-- include sidebar -->
 
-<div class="col-md-9">
+<div class="col-md-9 frontpage">
 
 <!-- all right(from .psd template) content here -->
 <div id="frontpage-carousel" class="carousel slide" data-ride="carousel">
@@ -22,10 +22,21 @@
     </div>
     <div class="item">
       <ul id="front-2" class="parallax-item cta-right">
-        <li class="layer" data-depth="0.20"><img src="wp-content/themes/as-studio/assets/img/2.png"></li>
+        <li class="layer" data-depth="0.20"><img src="wp-content/themes/as-studio/assets/img/2-flip.png"></li>
         <li class="layer" data-depth="0.30">
           <div class="cta-block">
-            <p>Разработка<br> сайтов</p>
+            <p>Разработка<br> лендингов</p>
+            <button class="btn cta"><a href="#">Заказать</a></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="item">
+      <ul id="front-3" class="parallax-item cta-left">
+        <li class="layer" data-depth="0.20"><img src="wp-content/themes/as-studio/assets/img/3.png"></li>
+        <li class="layer" data-depth="0.30">
+          <div class="cta-block">
+            <p>Полиграфия,<br> брендинг</p>
             <button class="btn cta"><a href="#">Заказать</a></button>
           </div>
         </li>

@@ -64,7 +64,7 @@ if(!function_exists("as_scripts")){
     	// If you want to add your scripts, you need to add value for $js_files, exapmle:
 		// "bootstrap.min", "custom_script"
 		
-		$js_files = array("bootstrap", "bootstrap.min", "jquery.parallax.min", "jquery.mCustomScrollbar", "app");
+		$js_files = array("bootstrap", "bootstrap.min", "jquery.parallax.min", "jquery.mCustomScrollbar", "jquery.form-validator.min", "app");
 
     	
     	foreach($js_files as $file){

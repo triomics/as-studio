@@ -3,37 +3,10 @@
 ?>
 
 <?php get_header (); ?>
-<script src="<?php echo get_template_directory_uri()?>/assets/js/animsition.min.js"></script>
-<script>
-	jQuery(document).ready(function($) {
-	  $("body").animsition({
-	    inClass: 'fade-in-up-sm',
-	    outClass: 'fade-out-up-sm',
-	    inDuration: 1500,
-	    outDuration: 800,
-	    linkElement: 'a:not([target="_blank"]):not([href^="#"])',
-	    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-	    loading: true,
-	    loadingParentElement: 'body', //animsition wrapper element
-	    loadingClass: 'animsition-loading',
-	    loadingInner: '<div class="some">some</div>', // e.g '<img src="loading.svg" />'
-	    timeout: false,
-	    timeoutCountdown: 5000,
-	    onLoadEvent: true,
-	    browser: [ 'animation-duration', '-webkit-animation-duration'],
-	    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-	    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-	    overlay : false,
-	    overlayClass : 'animsition-overlay-slide',
-	    overlayParentElement : 'body',
-	    transition: function(url){ window.location.href = url; }
-	  });
-	});
-</script>
 
 <?php get_sidebar(); ?> <!-- include sidebar -->
 
-<div class="col-md-9">
+<div class="col-md-9 vacancy-page">
 
 <!-- all right(from .psd template) content here -->
 
@@ -44,7 +17,7 @@
 					<div class="regular-job">
 						<h2 class="heading">Обычная работа</h2>
 						<p class="sub-head">Для того, кто хочет поработать...</p>
-						<button class="btn next-btn" data-goto="5">Далее</button>
+						<button class="btn next-btn bigger-font" data-goto="5">Далее</button>
 					</div>
 					<div class="dream">
 						<h2 class="heading">Осуществление мечты</h2>
@@ -72,7 +45,7 @@
 									<div id="form-el-1" class="form-el active">
 										<label for="name" class="el-title">Как к Вам обращаться?</label>
 										<div class="el-input">
-											<input id="name" name="name" type="text" required autocomplete="off" class="text-input">
+											<input id="name" name="name" type="text" required autocomplete="off" class="text-input" data-validation="length" data-validation-length="min2">
 										</div>
 										<button class="btn next-btn" data-formstep="2">Далее</button>
 									</div>
@@ -89,7 +62,7 @@
 									<div id="form-el-3" class="form-el">
 										<label for="email" class="el-title">Ваш email</label>
 										<div class="el-input">
-											<input id="email" name="email" autocomplete="off" type="email" required class="text-input">
+											<input id="email" name="email" autocomplete="off" type="email" required class="text-input" data-validation="email">
 										</div>
 										<button class="btn next-btn" data-formstep="4">Далее</button>
 									</div>
@@ -106,14 +79,18 @@
 				</div>
 				</div>
 				<div id="contact-success" class="contact-success">
+					<div class="popup-image">
+						<img src="<?php echo get_template_directory_uri()?>/assets/img/as-2.png" alt="">
+					</div>
 					<div class="popup-window">
 						<div class="popup-content">
-							<button class="btn close-btn" data-formstep="1" data-goto="1">
+							<!-- <button class="btn close-btn" data-formstep="1" data-goto="1">
 								<div class="line-wrapper">
 									<span class="line-1"></span>
 									<span class="line-2"></span>
 								</div>
-							</button>
+							</button> -->
+							<button class="btn back-btn" data-formstep="1" data-goto="1">Назад</button>
 							<h2 class="heading">Благодарю!</h2>
 							<p class="sub-head">Ваше сообщение успешно отправлено.</p>
 						</div>
@@ -189,16 +166,23 @@
 					</div>
 				</div>
 				<div id="screen-4" class="screen-step screen-4">
-					<div class="popup-window">
+					<div class="popup-image one">
+						<img src="<?php echo get_template_directory_uri()?>/assets/img/as-3.png" alt="">
+					</div>
+					<div class="popup-image two">
+						<img src="<?php echo get_template_directory_uri()?>/assets/img/as-4.png" alt="">
+					</div>
+					<div class="popup-window two">
 						<div class="popup-content">
-							<button class="btn close-btn" data-goto="1">
+							<!-- <button class="btn close-btn" data-formstep="1" data-goto="1">
 								<div class="line-wrapper">
 									<span class="line-1"></span>
 									<span class="line-2"></span>
 								</div>
-							</button>
+							</button> -->
+							<button class="btn back-btn" data-formstep="1" data-goto="1">Назад</button>
 							<h2 class="heading">Благодарим за интерес!</h2>
-							<p class="sub-head">На данное время проект на стадии открытия</p>
+							<p class="sub-head">На данное время <br/>проект на стадии открытия</p>
 						</div>
 					</div>
 				</div>
