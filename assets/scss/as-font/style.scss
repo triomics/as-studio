@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'AS';
-  src:  url('#{$icomoon-font-path}/AS.eot?1cv8e8');
-  src:  url('#{$icomoon-font-path}/AS.eot?1cv8e8#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/AS.ttf?1cv8e8') format('truetype'),
-    url('#{$icomoon-font-path}/AS.woff?1cv8e8') format('woff'),
-    url('#{$icomoon-font-path}/AS.svg?1cv8e8#AS') format('svg');
+  src:  url('#{$icomoon-font-path}/AS.eot?qyn5iw');
+  src:  url('#{$icomoon-font-path}/AS.eot?qyn5iw#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/AS.ttf?qyn5iw') format('truetype'),
+    url('#{$icomoon-font-path}/AS.woff?qyn5iw') format('woff'),
+    url('#{$icomoon-font-path}/AS.svg?qyn5iw#AS') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,9 +26,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.as-vk {
+.as-close-btn {
   &:before {
-    content: $as-vk;
+    content: $as-close-btn;
+  }
+}
+.as-burger-1 {
+  &:before {
+    content: $as-burger-1;
   }
 }
 .as-arow-down {
@@ -54,6 +59,11 @@
 .as-burger {
   &:before {
     content: $as-burger;
+  }
+}
+.as-vk {
+  &:before {
+    content: $as-vk;
   }
 }
 .as-instagram2 {

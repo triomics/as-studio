@@ -1,6 +1,6 @@
 .sidebar {
 	position: relative;
-	z-index: 102;
+	z-index: 100;
 }
 
 .sidebar-heading {
@@ -111,20 +111,23 @@ $btn-rotating-speed: 4s;
 
 #soc-block {
 	position: relative;
+	z-index: 9999;
 
 	& .img-soc {
 		position: absolute;
 		bottom: 100%;
 		z-index: -1;
 		visibility: hidden;
+		transform: translateY(50px);
 		opacity: 0;
-		transition: opacity .3s ease, visibility .3s .3s ease, z-index .3s .3s;
+		transition: opacity .2s ease, visibility .2s .2s ease, z-index .2s .2s, transform .2s ease;
 
 		&.active {
 			z-index: 999;
 			visibility: visible;
+			transform: translateY(0);
 			opacity: 1;
-			transition: opacity .3s .3s ease, visibility .3s ease, z-index .3s;
+			transition: opacity .2s .2s ease, visibility .2s ease, z-index .2s, transform .2s .2s ease;
 		}
 
 		&.youtube {
@@ -138,7 +141,7 @@ $btn-rotating-speed: 4s;
 			left: 445px;
 
 			& img {
-				width: 265px;
+				width: 255px;
 			}
 		}
 		&.vk {
@@ -152,7 +155,7 @@ $btn-rotating-speed: 4s;
 			left: 400px;
 
 			& img {
-				width: 410px;
+				width: 380px;
 			}
 		}
 		&.linked-in {
@@ -160,6 +163,13 @@ $btn-rotating-speed: 4s;
 
 			& img {
 				width: 405px;
+			}
+		}
+		&.instagram {
+			left: 500px;
+
+			& img {
+				width: 250px;
 			}
 		}
 	}

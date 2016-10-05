@@ -5,7 +5,11 @@
 <aside class="sidebar col-sm-3 col-md-3" role="complementary">
 
 	<div class="sidebar-heading">
-		<a href="##" class="heading">Алена Спивак</a>
+		<a href="../" class="heading">Алена Спивак</a>
+	</div>
+	<div id="mobileMenu" class="btn-mobile-menu show-on-mobile">
+		<span class="as-burger-1"></span>
+		<span class="as-close-btn"></span>
 	</div>
 	
 	<div class="sidebar-widget side-content">

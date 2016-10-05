@@ -128,6 +128,7 @@
 
 		& .name {
 			font-size: $big-2;
+			line-height: .9;
 		}
 
 		& .heading {
@@ -136,3 +137,6 @@
 	}
 }
 
+.portfolio-single .vacancy-section .screen-step .info-text .mCustomScrollBox {
+	padding-right: 0;
+}

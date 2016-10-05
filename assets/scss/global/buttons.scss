@@ -77,7 +77,11 @@
 		background-color: rgba(255,255,255,.5);
 		border: 1px solid transparent;
 		color: $reg;
-		transition: background-color .2s ease, color .2s ease;
+		transition: background-color .2s ease, color .2s ease, opacity .2s ease;
+
+		&.unvisible {
+			opacity: 0;
+		}
 
 		&:hover {
 			background-color: rgba(255,255,255, 1);
@@ -151,6 +155,12 @@
 
 			&:first-child {
 				margin-left: 0;
+
+				& a {
+					&:after {
+						width: 600%;
+					}
+				}
 			}
 			
 			& a {
@@ -177,11 +187,30 @@
 				&.as-youtube:hover {
 					color: #f16260;
 				}
+
+				&.as-instagram1 {
+					position: relative;
+
+					& img {
+						position: absolute;
+						top: -3px;
+						left: -3px;
+						width: 30px;
+						height: 30px;
+						opacity: 0;
+						transition: opacity .2s ease;
+					}
+				}
+
 				&.as-linkedin:hover {
 					color: #90cadd;
 				}
 				&.as-instagram1:hover {
 					color: #c7c5b3;
+
+					& img {
+						opacity: 1;
+					}
 				}
 
 				&.as-vk:hover {

@@ -1,7 +1,16 @@
 .vacancy-section {
 	position: relative;
-	margin-top: 70px;
+	margin-top: 60px;
 	height: 450px;
+	z-index: 400;
+
+	& .video-container {
+		margin-bottom: 25px;
+
+		&+.btn-wrapper>.btn {
+			margin-left: 95px;
+		}
+	}
 
 	& .form-vacancy {
 
@@ -15,6 +24,7 @@
 			height: 100%;
 			top: 0;
 			left: 0;
+			transform: translate3d(0,0,20px);
 		}
 	}
 
@@ -72,6 +82,66 @@
 		& .nav-sub {
 			text-align: right;
 			margin-bottom: 23px;
+
+			& .close-btn {
+					width: 40px;
+					margin-left: 10px;
+					height: 40px;
+					border-radius: 50%;
+					background-color: $bg-2;
+					opacity: 0.5;
+					transition: opacity .2s ease;
+
+					& .line-wrapper {
+						position: relative;
+						width: 100%;
+						height: 100%;
+					}
+
+					%line {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						width: 1px;
+						height: 27px;
+						background-color: $reg-acc;
+					}
+
+					&:hover {
+						opacity: 1;
+						& .line-1 {
+							-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+							    -ms-transform: translate(-50%, -50%) rotate(-45deg);
+							        transform: translate(-50%, -50%) rotate(-45deg);
+						}
+
+						& .line-2 {
+							-webkit-transform: translate(-50%, -50%) rotate(45deg);
+							    -ms-transform: translate(-50%, -50%) rotate(45deg);
+							        transform: translate(-50%, -50%) rotate(45deg);
+						}
+					}
+
+					& .line-1 {
+						@extend %line;
+						-webkit-transform: translate(-50%, -50%) rotate(45deg);
+						    -ms-transform: translate(-50%, -50%) rotate(45deg);
+						        transform: translate(-50%, -50%) rotate(45deg);
+						transition: -webkit-transform .5s ease;
+						transition: transform .5s ease;
+						transition: transform .5s ease, -webkit-transform .5s ease;
+					}
+
+					& .line-2 {
+						@extend %line;
+						-webkit-transform: translate(-50%, -50%) rotate(315deg);
+						    -ms-transform: translate(-50%, -50%) rotate(315deg);
+						        transform: translate(-50%, -50%) rotate(315deg);
+						transition: -webkit-transform .5s ease;
+						transition: transform .5s ease;
+						transition: transform .5s ease, -webkit-transform .5s ease;
+					}
+				}
 		}
 
 		& .link-block {
@@ -83,6 +153,7 @@
 				display: block;
 				transition: color .2s ease;
 				margin-bottom: 10px;
+				@extend %font-thinner;
 
 				& span {
 					position: relative;
@@ -118,10 +189,14 @@
 
 		& .info-text {
 
+			& .mCustomScrollBox {
+				padding-right: 50px;
+			}
+
 			& .text-content {
-				height: 385px;
+				height: 65vh; /* 385px */
 				overflow: hidden;
-				padding-right: 150px;
+				padding-right: 0;
 				box-sizing: border-box;
 
 				& .heading {
@@ -216,13 +291,13 @@
 
 			& .close-btn {
 				position: absolute;
-				bottom: 100%;
-				left: 100%;
+				bottom: 180px;
+				left: 630px;
 				width: 40px;
 				height: 40px;
 				border-radius: 50%;
-				background-color: $bg;
-				opacity: 1;
+				background-color: $bg-2;
+				opacity: .5;
 				transition: opacity .2s ease;
 
 				& .line-wrapper {

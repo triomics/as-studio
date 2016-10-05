@@ -11,7 +11,7 @@
 <!-- all right(from .psd template) content here -->
 
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-offset-1 col-md-11">
 			<section class="vacancy-section">
 				<?php 
 					if ( have_posts() ) :
@@ -21,15 +21,15 @@
 						<div class="info-text">
 							<div class="nav-sub">
 								<div class="row">
-									<div class="col-md-3 align-left"><button class="btn back-btn" data-goto="3"><?php _e('Отзыв', 'as-studio'); ?></button></div>
+									<div class="col-md-3 col-xs-6 col-sm-6 align-left"><button class="btn back-btn" data-goto="3"><?php _e('Отзыв', 'as-studio'); ?></button></div>
 									<div class="col-md-6 align-center"><button class="btn cta" data-goto="2"><?php _e('Купить psd макет за 10$', 'as-studio'); ?></button></div>
-									<div class="col-md-3 align-right"><a href="/portfolio/" class="btn back-btn"><?php _e('Назад', 'as-studio'); ?></a></div>
+									<div class="col-md-3 col-xs-6 col-sm-6 align-right"><a href="/portfolio/" class="btn back-btn"><?php _e('Назад', 'as-studio'); ?></a></div>
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-md-offset-2 col-md-8">
+								<div class="col-md-12">
 									<div id="giveScroll" class="text-content">
-										<h1 class="heading"><?php the_title(); ?></h1>
+										<!-- <h1 class="heading"><?php the_title(); ?></h1> -->
 										<?php the_content(); ?>
 									</div>
 								</div>
@@ -53,7 +53,6 @@
 											<form id="contact-form" class="form" action="contact.php" method="POST" novalidate>
 												<div id="form-el-1" class="form-el active">
 													<p class="sub-head"><?php _e('Введите Ваш e-mail', 'as-studio'); ?></p>
-													<label for="email" class="el-title"><?php _e('Ваш email', 'as-studio'); ?></label>
 													<div class="el-input">
 														<input id="email" name="email" autocomplete="off" type="email" required class="text-input">
 													</div>

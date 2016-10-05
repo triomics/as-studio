@@ -12,6 +12,9 @@ get_header (); ?>
 	<div class="row">
 		<div class="col-md-offset-2 col-md-10">
 			<section class="contact-section">
+				<div class="nav-sub">
+					<button id="set-step" class="btn back-btn unvisible" data-formstep="1">Назад</button>
+				</div>
 				<h2 class="heading">Готова Вас выслушать</h2>
 				<p class="sub-head">Давайте создадим вместе что-то стоящее и красивое</p>
 				<div class="form-wrapper">
@@ -21,7 +24,7 @@ get_header (); ?>
 							<div class="el-input">
 								<input id="name" name="name" type="text" autocomplete="off" class="text-input" data-validation="length required" data-validation-length="min2">
 							</div>
-							<button class="btn next-btn" data-formstep="2">Далее</button>
+							<button class="btn next-btn" data-formstep="2" data-backstep="1">Далее</button>
 						</div>
 						<div id="form-el-2" class="form-el">
 							<label for="sources" class="el-title">Что бы Вы хотели?</label>
@@ -31,24 +34,21 @@ get_header (); ?>
 									<option value="design">Дизайн</option>
 								</select>
 							</div>
-							<button class="btn next-btn" data-formstep="back">Назад</button>
-							<button class="btn next-btn" data-formstep="3">Далее</button>
+							<button class="btn next-btn" data-formstep="3" data-backstep="2">Далее</button>
 						</div>
 						<div id="form-el-3" class="form-el">
 							<label for="email" class="el-title">Ваш email</label>
 							<div class="el-input">
 								<input id="email" name="email" autocomplete="off" type="email" required class="text-input" data-validation="email">
 							</div>
-							<button class="btn next-btn" data-formstep="back">Назад</button>
-							<button class="btn next-btn" data-formstep="4">Далее</button>
+							<button class="btn next-btn" data-formstep="4" data-backstep="3">Далее</button>
 						</div>
 						<div id="form-el-4" class="form-el">
 							<label for="message" class="el-title">Сообщение</label>
 							<div class="el-input">
 								<textarea name="message" id="message" class="text-textarea" rows="5" form="contact-form" ></textarea>
 							</div>
-							<button class="btn next-btn" data-formstep="back">Назад</button>
-							<button class="btn next-btn" data-formstep="send">Отправить</button>
+							<button class="btn next-btn" data-formstep="send" data-backstep="1">Отправить</button>
 						</div>
 					</form>
 				</div>
@@ -59,13 +59,13 @@ get_header (); ?>
 					</div>
 					<div class="popup-window">
 						<div class="popup-content">
-							<!-- <button class="btn close-btn" data-formstep="1">
+							<button class="btn close-btn" data-formstep="1">
 								<div class="line-wrapper">
 									<span class="line-1"></span>
 									<span class="line-2"></span>
 								</div>
-							</button>  -->
-							<button class="btn back-btn" data-formstep="1">Назад</button>
+							</button> 
+							<!-- <button class="btn back-btn" data-formstep="1">Назад</button> -->
 							<h2 class="heading">Благодарю!</h2>
 							<p class="sub-head">Ваше сообщение успешно отправлено.</p>
 						</div>

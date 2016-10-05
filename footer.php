@@ -17,6 +17,9 @@
 			<div class="img-soc vk">
 				<img src="<?php echo get_template_directory_uri()?>/assets/img/as-vk.png" alt="">
 			</div>
+			<div class="img-soc instagram">
+				<img src="<?php echo get_template_directory_uri()?>/assets/img/as-insta.png" alt="">
+			</div>
 			<button class="btn soc-btn">Я в соц. сетях
 				<ul class="soc-icons">
 					<li><a href="#" class="as-twitter links-hover" data-hovershow="twitter"></a></li>
@@ -24,7 +27,7 @@
 					<li><a href="#" class="as-facebook links-hover" data-hovershow="facebook"></a></li>
 					<li><a href="#" class="as-youtube links-hover" data-hovershow="youtube"></a></li>
 					<li><a href="#" class="as-linkedin links-hover" data-hovershow="linked-in"></a></li>
-					<li><a href="#" class="as-instagram1 links-hover" data-hovershow="instagram"></a></li>		
+					<li><a href="#" class="as-instagram1 links-hover" data-hovershow="instagram"><img src="<?php echo get_template_directory_uri()?>/assets/img/insta.svg" alt=""></a></li>		
 				</ul>
 			</button>
 		</div>

@@ -5,7 +5,7 @@
 <div class="col-md-9 frontpage">
 
 <!-- all right(from .psd template) content here -->
-<div id="frontpage-carousel" class="carousel slide" data-ride="carousel">
+<div id="frontpage-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
@@ -15,7 +15,7 @@
         <li class="layer" data-depth="0.30">
           <div class="cta-block">
             <p>Разработка<br> сайтов</p>
-            <button class="btn cta"><a href="#">Заказать</a></button>
+            <button class="btn cta"><a href="kontakty/">Заказать</a></button>
           </div>
         </li>
       </ul>
@@ -26,7 +26,7 @@
         <li class="layer" data-depth="0.30">
           <div class="cta-block">
             <p>Разработка<br> лендингов</p>
-            <button class="btn cta"><a href="#">Заказать</a></button>
+            <button class="btn cta"><a href="kontakty/">Заказать</a></button>
           </div>
         </li>
       </ul>
@@ -37,7 +37,7 @@
         <li class="layer" data-depth="0.30">
           <div class="cta-block">
             <p>Полиграфия,<br> брендинг</p>
-            <button class="btn cta"><a href="#">Заказать</a></button>
+            <button class="btn cta"><a href="kontakty/">Заказать</a></button>
           </div>
         </li>
       </ul>

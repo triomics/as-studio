@@ -5,7 +5,7 @@
 <div class="col-md-9 portfolio-archive">
 
 <!-- all right(from .psd template) content here -->
-<div id="frontpage-carousel" class="carousel slide" data-ride="carousel">
+<div id="frontpage-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
